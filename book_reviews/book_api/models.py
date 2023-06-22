@@ -1,11 +1,11 @@
 from django.db import models
+from user_api.models import UserModel
 
-
-# Create your models here.
 class Book(models.Model):
     id = models.BigAutoField(primary_key=True)
+    user= models.ForeignKey(UserModel, related_name="id",on_delete=models.CASCADE)
     book_name = models.CharField(max_length=256)
-    book_resume= models.CharField(max_length=1028)
+    user_review= models.CharField(max_length=2048)
     book_rating= models.FloatField(default=0.0)
     class Meta:
         db_table= "review"
