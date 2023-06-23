@@ -76,14 +76,3 @@ class BooksDetailRequest(generics.GenericAPIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-
-# class BookViewSet(viewsets.ModelViewSet):
-#     queryset = Book.objects.all()
-#     serializer_class = BookSerializer
-
-
-# class DeleteBookViewSet(viewsets.ModelViewSet,id):
-#     data = Book.objects.filter(id=id).delete()
-#     serializer_class = BookSerializer
-
-
